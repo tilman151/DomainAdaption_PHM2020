@@ -13,6 +13,7 @@ The code was implemented for and tested with Python 3.7. Following additional pa
     matplotlib=3.1
     scikit-learn=0.22
     pandas
+    statmodels
     
 Optionally you can also use the provided conda environment file to recreate the environment.
 
