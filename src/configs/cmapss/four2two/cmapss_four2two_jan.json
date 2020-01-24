@@ -1,0 +1,55 @@
+{
+    "name": "cmapss_four2two_jan",
+    "dataset": {
+        "name": "datasets.domain_adaption.deep_adaption_dataset",
+        "parameters": {
+            "source_dataset": {
+                "name": "datasets.cmapss.cmapss",
+                "parameters": {
+                    "fd": 4,
+                    "window_size": 30
+                }
+            },
+            "target_dataset": {
+                "name": "datasets.cmapss.cmapss",
+                "parameters": {
+                    "fd": 2,
+                    "window_size": 30
+                }
+            },
+            "batch_size": 512,
+            "shuffle": true
+        }
+    },
+    "model": {
+        "name": "models.rul.BaselineNetwork",
+        "parameters": {
+            "in_channels": 14,
+            "seq_len": 30,
+            "base_filters": 10,
+            "num_layers": 5,
+            "num_common_layers": 5,
+            "kernel_size": 10,
+            "num_classes": 1,
+            "dim_fc": 100,
+            "dropout_rate": 0.5
+        }
+    },
+    "trainer": {
+        "name": "trainers.regression.JANTrainer",
+        "parameters": {
+            "optim": {
+                "name": "torch.optim.Adam",
+                "parameters": {
+                    "lr": 0.001
+                }
+            },
+            "max_lmbd": 100,
+            "max_steps": 3000
+        }
+    },
+    "metrics": [
+        "metrics.domain_adaption.RMSE",
+        "metrics.domain_adaption.RULScore"
+    ]
+}
