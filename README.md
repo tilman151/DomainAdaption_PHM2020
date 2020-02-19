@@ -1,7 +1,7 @@
 # Evaluation of Unsupervised Domain Adaption for RUL Estimation
 
 This repository contains the code and raw results for the upcoming ICPHM2020 paper 
-`An Improved Evaluation Framework for Unsupervised Domain Adaption for Remaining Useful Lifetime Estimation`.
+`A Novel Evaluation Framework for Unsupervised Domain Adaption on Remaining Useful Lifetime Estimation`.
 
 ## Installation
 
