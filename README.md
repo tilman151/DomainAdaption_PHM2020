@@ -3,6 +3,18 @@
 This repository contains the code and raw results for the upcoming ICPHM2020 paper 
 `A Novel Evaluation Framework for Unsupervised Domain Adaption on Remaining Useful Lifetime Estimation`.
 
+Unsupervised Domain Adaption (DA) is an approach for adapting a data-driven model to new data without labels.
+Recent work on Remaining Useful Lifetime (RUL) estimation of aero engines yielded promising results for this approach.
+However, the current evaluation framework for DA is of limited significance when used for RUL estimation.
+It assumes a use case where a large number of fully degraded systems are available for adaption, which makes unsupervised DA in itself unnecessary.
+It is shown that the current framework overestimates adaption performance and obscures potential, negative effects of DA on performance.
+We propose a novel evaluation framework for unsupervised DA, specialized in RUL estimation, that takes the number of available systems and their grade of degradation into account.
+It enables an informed performance comparison of DA methods.
+
+The results show that the grade of degradation is the determining factor for performance, while the number of systems has next to no influence. This repository is able to reproduce the results of the paper and enable evaluating your own algorithms with this framework.
+
+Feel free to contact me, if you have questions about this work.
+
 ## Installation
 
 The code was implemented for and tested with Python 3.7. Following additional packages are required:
